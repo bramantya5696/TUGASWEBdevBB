@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jankenpon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Jankenpon (Rock-Paper-Scissors)</h1>
+    <!-- display new game section -->
+    <section id="newGame">
+        <button id="newGameBtn" onclick="startNewGame()">New Game</button>
+    </section>
+
+    <!-- fill name modal -->
+    <div id="nameInputDiv" style="display:none;">
+        <!-- <div id="nameInputDiv"> -->
+        <label for="playerName">Enter your name: </label>
+        <input type="text" id="playerName">
+        <button onclick="submitName()">Start</button>
+    </div>
+
+    <!-- game section -->
+    <section id="gameDiv" style="display:none;">
+        <!-- <div id="gameDiv"> -->
+        <p id="greeting"></p>
+        <button onclick="play('rock')">Rock</button>
+        <button onclick="play('paper')">Paper</button>
+        <button onclick="play('scissors')">Scissors</button>
+    </section>
+
+    <!-- game result div -->
+    <div id="afterGameDiv" style="display:none;">
+        <p id="result"></p>
+        <!-- <div id="afterGameDiv"> -->
+        <button onclick="playAgain()">Try Again</button>
+        <button onclick="startNewGame()">New Game</button>
+    </div>
+
+    <!-- game history section -->
+    <div class="gameHistory">
+        <h2>Game History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Game #</th>
+                    <th>Name</th>
+                    <th>Move</th>
+                    <th>Move(Comp)</th>
+                    <th>Result</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="gameHistory">
+                <!-- Game history will be populated here -->
+                <tr>
+                    <td>1</td>
+                    <td>Bram</td>
+                    <td>scissors</td>
+                    <td>scissors</td>
+                    <td>draw</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bram</td>
+                    <td>rock</td>
+                    <td>scissors</td>
+                    <td>win</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

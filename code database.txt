@@ -1,0 +1,46 @@
+-- CREATE TABLE users (
+-- 	id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+-- 	name VARCHAR(255) NOT NULL,
+-- 	email VARCHAR(255) NOT NULL,
+-- 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+-- 	PRIMARY KEY(id)
+-- );
+
+-- CREATE TABLE products (
+-- 	id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+-- 	name VARCHAR(255) NOT NULL,
+-- 	price INT NOT NULL,
+-
+-- INSERT INTO users (name, email) VALUES ('user 1', 'user1@mail.com');
+-- INSERT INTO users (name, email) VALUES ('user 2', 'user2@mail.com');
+-- INSERT INTO users (name, email) VALUES ('user 3', 'user3@mail.com');
+
+-- INSERT INTO products (name, price, status) VALUES ('Product 1', 50000, 1);
+-- INSERT INTO products (name, price, status) VALUES ('Product 2', 60000, 1);
+-- INSERT INTO products (name, price, status) VALUES ('Product 3', 70000, 1);
+
+-- INSERT INTO orders (product_id, user_id, qty)
+SELECT 
+	prd.name AS 'Product Name',
+	ord.qty AS 'Quantity',
+	ord.created_at AS 'Transaction Date'
+FROM 
+	orders ord 
+JOIN 
+	products prd 
+ON 
+	ord.product_id = prd.id
+
+SELECT 
+	prd.name AS 'product_name',
+	usr.name AS 'user_name'
+FROM 
+	orders ord 
+JOIN 
+	products prd 
+ON 
+	ord.product_id = prd.id
+JOIN 
+	users usr
+ON 
+	ord ord.user_id= usr.id
