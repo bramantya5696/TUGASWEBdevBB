@@ -2,4 +2,125 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #c5ff00;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+button {
+  color: #c5ff00;
+  background-color: transparent;
+  border: 1px solid #c5ff00;
+  padding: 10px;
+}
+button:hover {
+  background-color: #c5ff00;
+  color: #3a3a3a;
+  border: 1px solid #c5ff00;
+}
+body {
+  background-color: #3a3a3a;
+}
+/* new game section */
+section#newGame {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+}
+section#newGame h1 {
+  font-size: 2.5rem;
+  margin: 20px;
+}
+section#newGame #newGameBtn {
+  /* width: 200px; */
+  /* margin: auto; */
+  background-color: transparent;
+  border: 1px solid #c5ff00;
+  border-radius: 2px;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+}
+section#newGame #newGameBtn:hover {
+  background-color: #c5ff00;
+  color: #3a3a3a;
+}
+
+/* name input div */
+#nameInputDiv {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+}
+#nameInputDiv input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c5ff00;
+}
+#nameInputDiv input:focus {
+  outline: none;
+  border-bottom: 1px solid #c5ff00;
+}
+#nameInputDiv button {
+  background-color: transparent;
+  border: 1px solid #c5ff00;
+  padding: 10px;
+  border-radius: 2px;
+}
+#nameInputDiv button:hover {
+  background-color: #c5ff00;
+  color: #3a3a3a;
+}
+/* game section */
+section#gameDiv {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+}
+section#gameDiv .game-disp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+section#gameDiv .game-disp .main-game-hand {
+  display: flex;
+  /* flex-direction: row; */
+}
+section#gameDiv .game-disp .main-game-hand h1 {
+  margin: 0 40px;
+}
+section#gameDiv .game-disp .main-game-hand i {
+  font-size: 5rem;
+  color: #c5ff00;
+}
+section#gameDiv .game-button button {
+  background-color: transparent;
+  border: 1px solid #c5ff00;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 10px;
+}
+section#gameDiv .game-button button:hover {
+  background-color: #c5ff00;
+  color: #3a3a3a;
+}
+
+#afterGameDiv {
+  width: 100%;
+  text-align: center;
+}
+
+/* game history section */
+.gameHistory {
+  /* margin: auto; */
+  text-align: center;
+}
+.gameHistory h2 {
+  margin: 30px;
+}
+.gameHistory table {
+  width: 70%;
+  height: 50vh;
+  overflow-y: scroll;
+  margin: auto;
 }

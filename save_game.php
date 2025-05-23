@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $comp_move = $_POST['comp_move'] ?? '';
     $result = $_POST['result'] ?? '';
 
-    $stmt = $conn->prepare("INSERT INTO games (player_name, move, move_comp, result, time) VALUES (?, ?, ?, ?, NOW())");
+    $stmt = $conn->prepare("INSERT INTO game_history (player_name, move, move_comp, result, time) VALUES (?, ?, ?, ?, NOW())");
     $stmt->bind_param("ssss", $name, $player_move, $comp_move, $result);
 
     if ($stmt->execute()) {
